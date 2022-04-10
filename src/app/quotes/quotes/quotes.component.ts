@@ -55,6 +55,11 @@ export class QuotesComponent implements OnInit {
     this.quotes.splice(index, 1);
   }
 
+  exitForm() {
+    this.adding = false;
+    this.quoteForm.reset();
+  }
+
   constructor() { }
 
   ngOnInit(): void {
