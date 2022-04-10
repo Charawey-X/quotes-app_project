@@ -1,22 +1,22 @@
 <div class="all-quotes">
-    <h2>All Quotes</h2>
+    <h2>Book Quotes</h2>
     <div *ngFor="let quote of quotes">
-        <mat-card>
+        <mat-card class="content">
             <mat-card-title>
-                <mat-icon class="quote-icon" color="accent" aria-hidden="false" aria-label="circle check mark icon">check_circle_outline</mat-icon>
-                {{ quote.title }}
+                <span class="book-icon"><img src="../../../assets/bookicon.png" alt="Book"></span>
+                <span class="book-title">{{ quote.title }}</span>
             </mat-card-title>
             <div class="detail-options">
-                <mat-icon class="quote-icon" color="primary">edit</mat-icon>
-                <mat-icon class="quote-icon" color="warn">remove_circle</mat-icon>
+                <mat-icon class="quote-icon thumb-up">thumb_up</mat-icon>
+                <mat-icon class="quote-icon thumb-down">thumb_down</mat-icon>
+                <mat-icon class="quote-icon" color="accent">clear</mat-icon>
             </div>
             <mat-card-content>
                 <p>
-                    <span class="detail-label">Frequency:</span> {{ quote.description }}
+                    <span class="detail">{{ quote.description }}</span>
                 </p>
                 <p>
-                    <span class="detail-label">Why is this habit important to me?</span>
-                    <br />{{ quote.author }}
+                    <span class="detail">Author: {{ quote.author }}</span>
                 </p>
             </mat-card-content>
         </mat-card>
