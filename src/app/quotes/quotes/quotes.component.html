@@ -38,10 +38,10 @@
                 <span class="book-title">{{ quote.title }}</span>
             </mat-card-title>
             <div class="detail-options">
-                {{upvotes}}
-                <mat-icon class="quote-icon thumb-up" (click)="upVote()">thumb_up</mat-icon>
-                {{downvotes}}
-                <mat-icon class="quote-icon thumb-down" (click)="downVote()">thumb_down</mat-icon>
+                {{quote.upvote}}
+                <mat-icon class="quote-icon thumb-up" (click)="upVote(i)">thumb_up</mat-icon>
+                {{quote.downvote}}
+                <mat-icon class="quote-icon thumb-down" (click)="downVote(i)">thumb_down</mat-icon>
                 <mat-icon class="quote-icon clear" color="accent" (click)="onDelete(i)">clear</mat-icon>
             </div>
             <mat-card-content>

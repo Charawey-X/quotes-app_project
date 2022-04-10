@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Quote } from '../quotes';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -37,24 +37,32 @@ export class QuotesComponent implements OnInit {
                     '\nThere are absolutes. Everything in between is still left to fight for.',
       author:
         'Derek Landy.',
+      upvote:0,
+      downvote:0,
     },
     <Quote>{
       title: 'Caraval: \nBook I',
       description: 'No one is truly honest. \nEven if we don\'t lie to others, we often lie to ourselves.',
       author:
         'Stephanie Garber.',
+      upvote:0,
+      downvote:0,
     },
     <Quote>{
       title: 'Dune: \nBook I',
       description: 'A process cannot be understood by stopping it. \nUnderstanding must move with the flow of the process, \nmust join it and flow with it.',
       author:
         'Frank Herbert.',
+      upvote:0,
+      downvote:0,
     },
     <Quote>{
       title: 'The Mountains Sing',
       description: 'If our stories survive, we will not die. \nEven when our bodies are no longer here on this Earth.',
       author:
         'Nguyễn Phan Quế Mai.',
+      upvote:0,
+      downvote:0,
     },
   ];
 
@@ -67,16 +75,18 @@ export class QuotesComponent implements OnInit {
     this.quoteForm.reset();
   }
 
-  public upvotes = 0;
-  public downvotes = 0;
+   upVote(index:number){
+      var up=this.quotes[index].upvote+1;
+      this.quotes[index].upvote=up;
 
-  upVote(){
-    this.upvotes= this.upvotes+1;
-    console.log('upvotes')
   }
-  downVote(){
-    this.downvotes = this.downvotes+1;
-  }
+
+
+  downVote(index:number){
+    var down=this.quotes[index].downvote+1;
+    this.quotes[index].downvote=down;
+
+}
 
   constructor() { }
 
