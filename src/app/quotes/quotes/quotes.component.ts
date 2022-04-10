@@ -60,6 +60,17 @@ export class QuotesComponent implements OnInit {
     this.quoteForm.reset();
   }
 
+  public upvotes = 0;
+  public downvotes = 0;
+
+  upVote(){
+    this.upvotes= this.upvotes+1;
+    console.log('upvotes')
+  }
+  downVote(){
+    this.downvotes = this.downvotes+1;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
