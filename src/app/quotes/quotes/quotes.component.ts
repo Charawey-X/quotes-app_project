@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quotes';
+import { FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-quotes',
@@ -7,6 +9,19 @@ import { Quote } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  public adding = false;
+
+  public quoteForm = new FormGroup({
+    title: new FormControl(''),
+    description: new FormControl(''),
+    author: new FormControl(''),
+  });
+
+  public onSubmit() {
+    this.quotes.unshift(this.quoteForm.value as Quote);
+    this.adding = false;
+  }
+
   public quotes: Quote[] = [
     <Quote>{
       title: 'SKULDUGGERY PLEASANT: \nThe Dying Of The Light',

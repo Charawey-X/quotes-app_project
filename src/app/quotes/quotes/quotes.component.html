@@ -1,22 +1,22 @@
-<div class="add-form-container">
+<div class="add-form-container" *ngIf="adding">
     <mat-card>
         <mat-card-title>ADD NEW QUOTE </mat-card-title>
         <hr />
-        <form>
+        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
             <mat-card-content>
                 <mat-form-field appearance="fill">
                     <mat-label>Book Title</mat-label>
-                    <input matInput />
+                    <input matInput formControlName="title" />
                 </mat-form-field>
                 <br />
                 <mat-form-field appearance="fill">
                     <mat-label>Description</mat-label>
-                    <textarea matInput placeholder="What's your favourite quote?"></textarea>
+                    <textarea matInput formControlName="description" placeholder="What's your favourite quote?"></textarea>
                 </mat-form-field>
                 <br />
                 <mat-form-field appearance="fill">
                     <mat-label>Author</mat-label>
-                    <textarea matInput placeholder="Writer's name"></textarea>
+                    <textarea matInput formControlName="author" placeholder="Writer's name"></textarea>
                 </mat-form-field>
             </mat-card-content>
             <mat-card-actions class="wrapper">
@@ -27,8 +27,10 @@
     </mat-card>
 </div>
 
-<div class="all-quotes">
-    <h2>Book Quotes</h2>
+<div class="all-quotes" *ngIf="!adding">
+    <button mat-raised-button color="accent" (click)="adding = !adding">
+    ADD NEW QUOTE
+  </button>
     <div *ngFor="let quote of quotes">
         <mat-card class="content">
             <mat-card-title>
@@ -38,7 +40,7 @@
             <div class="detail-options">
                 <mat-icon class="quote-icon thumb-up">thumb_up</mat-icon>
                 <mat-icon class="quote-icon thumb-down">thumb_down</mat-icon>
-                <mat-icon class="quote-icon" color="accent">clear</mat-icon>
+                <mat-icon class="quote-icon clear" color="accent">clear</mat-icon>
             </div>
             <mat-card-content>
                 <p>
