@@ -25,12 +25,8 @@ import { QuotesComponent } from './quotes/quotes/quotes.component';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-<<<<<<< HEAD
     MatSelectModule,
     MatButtonModule
-=======
-    MatSelectModule
->>>>>>> f0cc85dd232a0a387392bdf679889ba40e5c9958
   ],
   providers: [],
   bootstrap: [AppComponent]
