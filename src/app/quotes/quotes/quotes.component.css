@@ -11,7 +11,7 @@
     width: 80%;
     margin: 1em auto;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     color: white;
 }
 
@@ -47,12 +47,14 @@ button:hover,
 
 mat-card-title {
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
+    padding-bottom: 10px;
 }
 
 mat-card-content {
     text-align: center;
+    font-size: 17px;
 }
 
 .book-icon {
@@ -63,6 +65,7 @@ mat-card-content {
 
 .book-title {
     padding-left: 40px;
+    font-weight: bold;
 }
 
 .thumb-up {
