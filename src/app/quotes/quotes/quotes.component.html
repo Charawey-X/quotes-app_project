@@ -29,8 +29,8 @@
 
 <div class="all-quotes" *ngIf="!adding">
     <button mat-raised-button color="accent" (click)="adding = !adding">
-    ADD NEW QUOTE
-  </button>
+      ADD NEW QUOTE
+    </button>
     <div *ngFor="let quote of quotes; let i = index;">
         <mat-card class="content">
             <mat-card-title>

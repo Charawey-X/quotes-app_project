@@ -66,6 +66,14 @@ export class QuotesComponent implements OnInit {
     },
   ];
 
+  upVote(index:number){
+      this.quotes[index].upvote+=1;
+  }
+
+  downVote(index:number){
+    this.quotes[index].downvote+=1;
+}
+
   public onDelete(index: number) {
     this.quotes.splice(index, 1);
   }
@@ -74,19 +82,6 @@ export class QuotesComponent implements OnInit {
     this.adding = false;
     this.quoteForm.reset();
   }
-
-   upVote(index:number){
-      var up=this.quotes[index].upvote+1;
-      this.quotes[index].upvote=up;
-
-  }
-
-
-  downVote(index:number){
-    var down=this.quotes[index].downvote+1;
-    this.quotes[index].downvote=down;
-
-}
 
   constructor() { }
 
