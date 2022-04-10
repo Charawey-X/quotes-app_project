@@ -31,7 +31,7 @@
     <button mat-raised-button color="accent" (click)="adding = !adding">
     ADD NEW QUOTE
   </button>
-    <div *ngFor="let quote of quotes">
+    <div *ngFor="let quote of quotes; let i = index;">
         <mat-card class="content">
             <mat-card-title>
                 <span class="book-icon"><img src="../../../assets/bookicon.png" alt="Book"></span>
@@ -40,7 +40,7 @@
             <div class="detail-options">
                 <mat-icon class="quote-icon thumb-up">thumb_up</mat-icon>
                 <mat-icon class="quote-icon thumb-down">thumb_down</mat-icon>
-                <mat-icon class="quote-icon clear" color="accent">clear</mat-icon>
+                <mat-icon class="quote-icon clear" color="accent" (click)="onDelete(i)">clear</mat-icon>
             </div>
             <mat-card-content>
                 <p>

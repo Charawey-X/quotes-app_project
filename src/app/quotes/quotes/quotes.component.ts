@@ -51,6 +51,10 @@ export class QuotesComponent implements OnInit {
     },
   ];
 
+  public onDelete(index: number) {
+    this.quotes.splice(index, 1);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
