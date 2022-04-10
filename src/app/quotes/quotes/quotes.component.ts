@@ -21,6 +21,7 @@ export class QuotesComponent implements OnInit {
     if (this.quoteForm.value.length!=0 && this.quoteForm.valid==true){
        this.quotes.unshift(this.quoteForm.value as Quote);
        this.adding = false;
+       this.quoteForm.reset();
 
     }
     else {
