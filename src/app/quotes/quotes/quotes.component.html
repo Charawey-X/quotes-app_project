@@ -6,20 +6,20 @@
             <mat-card-content>
                 <mat-form-field appearance="fill">
                     <mat-label>Book Title</mat-label>
-                    <input matInput formControlName="title" />
+                    <input matInput formControlName="title" required />
                 </mat-form-field>
                 <br />
                 <mat-form-field appearance="fill">
                     <mat-label>Description</mat-label>
-                    <textarea matInput formControlName="description" placeholder="What's your favourite quote?"></textarea>
+                    <textarea matInput formControlName="description" placeholder="What's your favourite quote?" required></textarea>
                 </mat-form-field>
                 <br />
                 <mat-form-field appearance="fill">
                     <mat-label>Author</mat-label>
-                    <textarea matInput formControlName="author" placeholder="Writer's name"></textarea>
+                    <textarea matInput formControlName="author" placeholder="Writer's name" required></textarea>
                 </mat-form-field>
             </mat-card-content>
-            <mat-card-actions class="wrapper">
+            <mat-card-actions>
                 <button mat-raised-button color="accent" type="submit" class="save">SAVE</button>
                 <button mat-raised-button class="cancel" (click)="exitForm()">CANCEL</button>
             </mat-card-actions>

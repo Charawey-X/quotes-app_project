@@ -18,8 +18,14 @@ export class QuotesComponent implements OnInit {
   });
 
   public onSubmit() {
-    this.quotes.unshift(this.quoteForm.value as Quote);
-    this.adding = false;
+    if (this.quoteForm.value.length!=0 && this.quoteForm.valid==true){
+       this.quotes.unshift(this.quoteForm.value as Quote);
+       this.adding = false;
+
+    }
+    else {
+      console.error();
+    }
   }
 
   public quotes: Quote[] = [
