@@ -1,3 +1,32 @@
+<div class="add-form-container">
+    <mat-card>
+        <mat-card-title>ADD NEW QUOTE </mat-card-title>
+        <hr />
+        <form>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Book Title</mat-label>
+                    <input matInput />
+                </mat-form-field>
+                <br />
+                <mat-form-field appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput placeholder="What's your favourite quote?"></textarea>
+                </mat-form-field>
+                <br />
+                <mat-form-field appearance="fill">
+                    <mat-label>Author</mat-label>
+                    <textarea matInput placeholder="Writer's name"></textarea>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions class="wrapper">
+                <button mat-raised-button color="accent" type="submit" class="save">SAVE</button>
+                <button mat-raised-button class="cancel">CANCEL</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
+
 <div class="all-quotes">
     <h2>Book Quotes</h2>
     <div *ngFor="let quote of quotes">

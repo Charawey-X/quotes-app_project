@@ -75,3 +75,63 @@ mat-card-content {
 .thumb-down {
     color: red;
 }
+
+.add-form-container {
+    padding: 4em;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.add-form-container mat-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.add-form-container mat-card-title {
+    margin: 1em !important;
+    font-weight: bold !important;
+}
+
+.add-form-container button {
+    margin-top: 10px !important;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.save:hover {
+    background-color: lime;
+}
+
+.cancel:hover {
+    background-color: red;
+}
+
+.add-form-container mat-card-content {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+form {
+    padding-top: 1em;
+}
+
+mat-form-field {
+    width: 90%;
+}
+
+.add-form-container button {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1em;
+}
+
+.add-form-container button:hover,
+.detail-options {
+    cursor: pointer;
+}
+
+mat-label {
+    font-weight: bold !important;
+}
