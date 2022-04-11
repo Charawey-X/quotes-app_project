@@ -66,8 +66,15 @@ export class QuotesComponent implements OnInit {
     },
   ];
 
+  newQuote =[
+    <Quote>{
+      upvote:0,
+      downvote:0,
+          }
+  ];
+
   upVote(index:number){
-      this.quotes[index].upvote+=1;
+    this.quotes[index].upvote+=1;
   }
 
   downVote(index:number){
