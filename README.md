@@ -41,9 +41,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Installation / Setup instruction
 * Open Terminal {Ctrl+Alt+T}
 
-* git clone ```https://github.com/Owiti-Charles/Quotes-app.git```
+* git clone ```https://github.com/Charawey-X/quotes-app_project.git```
 
-* cd Quotes-app
+* cd quotes-app_project
 
 * code . or atom . based on the text editor you use.
 
@@ -51,8 +51,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 * [HTML5](https://github.com/topics/html5)
 * [CSS](https://github.com/topics/css3)
-* [AngularCLI]
-* markdown
+* [AngularCLI](https://angular.io/cli)
 * [Angular Material](https://material.angular.io/)
 
 ## Known Bugs
